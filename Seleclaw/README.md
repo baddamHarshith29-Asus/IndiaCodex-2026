@@ -5,9 +5,10 @@ Aegis AI v2 is a decentralized, privacy-first AI marketplace and model registry 
 ---
 
 ## 💻 Hackathon Presentation Slide Deck
-We have packaged a premium, printable, interactive presentation slide deck directly in this submission folder!
-* **Slide Deck File**: [presentation.html](file:///d:/aegis/IndiaCodex-2026/Seleclaw/presentation.html)
-* *Tip*: Open the HTML file in any browser, and press **`Ctrl + P`** (Print) to save it directly as a professional landscape **PDF** presentation!
+We have packaged both a premium interactive slide deck and a pre-compiled PDF presentation directly in this folder:
+* **Interactive Slide Deck**: [presentation.html](file:///d:/aegis/IndiaCodex-2026/Seleclaw/presentation.html)
+* **Pre-compiled PDF Presentation**: [presentation.pdf](file:///d:/aegis/IndiaCodex-2026/Seleclaw/presentation.pdf)
+* *Tip*: You can also open the HTML file in any browser, and press **`Ctrl + P`** (Print ➔ Save as PDF, Landscape) to custom print it.
 
 ---
 
