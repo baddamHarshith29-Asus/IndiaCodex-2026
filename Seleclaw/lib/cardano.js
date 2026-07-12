@@ -277,7 +277,7 @@ export function getStoredDatasets() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(ds => ({
           ...ds,
-          owner: ds.owner || 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8',
+          owner: ds.owner || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
           trustScore: ds.trustScore || 88,
           aiReadiness: ds.aiReadiness || 85,
           compliance: ds.compliance || 95,
@@ -296,7 +296,7 @@ export function getStoredDatasets() {
   const defaultDatasets = [
     {
       id: 1,
-      owner: 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8',
+      owner: 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
       ipfsCID: 'QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco',
       name: 'Anonymized Clinical Patient Outcomes (COVID-19)',
       description: 'Cleaned patient record demographics, co-morbidities, treatments, and clinical outcomes. Fully anonymized for medical research.',
@@ -312,7 +312,7 @@ export function getStoredDatasets() {
     },
     {
       id: 2,
-      owner: 'addr_test1qp6r6t2cxw7yvn7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8',
+      owner: 'addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw',
       ipfsCID: 'QmYwAPzwh3J3uX8A5J4B8W9W5z7YV3n3f8K9o7J5W1z1Y2',
       name: 'Credit Risk Scoring Dataset',
       description: 'Historical credit data including loan amounts, repayment statuses, employment terms, and default flags. Excellent for training financial risk models.',
@@ -503,7 +503,7 @@ export function getStoredModels() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(model => ({
           ...model,
-          owner: model.owner || 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8',
+          owner: model.owner || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
           datasetIds: model.datasetIds || (model.datasetId ? [Number(model.datasetId)] : [1]),
           framework: model.framework || 'TensorFlow',
           inferenceTask: model.inferenceTask || 'Classification',
@@ -518,7 +518,7 @@ export function getStoredModels() {
     {
       id: 1,
       name: "COVID Prognosis Engine",
-      owner: "addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8",
+      owner: "addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv",
       datasetIds: [1],
       version: "v1.1.0",
       accuracy: 94.2,
@@ -530,7 +530,7 @@ export function getStoredModels() {
     {
       id: 2,
       name: "Deep Credit Risk Profiler",
-      owner: "addr_test1qp6r6t2cxw7yvn7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8",
+      owner: "addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw",
       datasetIds: [2],
       version: "v2.0.4",
       accuracy: 91.8,
@@ -572,7 +572,7 @@ export function getProposals() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(prop => ({
           ...prop,
-          creator: prop.creator || 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8',
+          creator: prop.creator || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
           votesYes: Number(prop.votesYes || 0),
           votesNo: Number(prop.votesNo || 0),
           votesAbstain: Number(prop.votesAbstain || 0),
@@ -587,7 +587,7 @@ export function getProposals() {
       id: 1,
       title: "Integrate DICOM imaging validation standard into Aegis Scan pipeline",
       description: "This proposal requests funding (450 ADA) from the Treasury to build and register the validation schemas for raw medical DICOM image headers in Aegis AI v2.",
-      creator: "addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8",
+      creator: "addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv",
       votesYes: 1840,
       votesNo: 120,
       votesAbstain: 50,
@@ -598,7 +598,7 @@ export function getProposals() {
       id: 2,
       title: "Mandate third-party auditing for data quality scores above 95%",
       description: "To ensure reliability, datasets scoring above 95/100 should be subject to a secondary validation pool verification script check before final certificate minting.",
-      creator: "addr_test1qp6r6t2cxw7yvn7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8",
+      creator: "addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw",
       votesYes: 450,
       votesNo: 980,
       votesAbstain: 110,

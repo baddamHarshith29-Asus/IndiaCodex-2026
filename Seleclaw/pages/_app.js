@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps }) {
 
   const connectMockWallet = () => {
     console.log('🔌 Connecting to Mock Cardano wallet...');
-    const mockAddress = 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8';
+    const mockAddress = 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv';
     setAccount(mockAddress);
     setWalletName('simulation');
     setBalanceADA(750.50);
