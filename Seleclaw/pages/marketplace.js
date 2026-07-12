@@ -147,7 +147,7 @@ export default function Marketplace({ account, lucid }) {
     try {
       setPurchasing(true);
       
-      const platformOwnerAddress = process.env.NEXT_PUBLIC_SCRIPT_ADDRESS || 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8';
+      const platformOwnerAddress = process.env.NEXT_PUBLIC_SCRIPT_ADDRESS || 'addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw';
       
       console.log('Initiating transaction via Lucid...');
       const txResult = await purchaseDatasetOnCardano(

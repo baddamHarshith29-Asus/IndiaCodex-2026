@@ -142,7 +142,7 @@ export default function Upload({ account, lucid }) {
         throw new Error('Please connect your wallet first');
       }
 
-      const scriptAddress = process.env.NEXT_PUBLIC_SCRIPT_ADDRESS || 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8';
+      const scriptAddress = process.env.NEXT_PUBLIC_SCRIPT_ADDRESS || 'addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw';
       const priceLovelace = adaToLovelace(formData.priceInADA);
 
       const trustScoreVal = Math.floor(Math.random() * (98 - 88 + 1)) + 88; // 88-98 quality score
