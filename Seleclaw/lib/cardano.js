@@ -268,6 +268,19 @@ export function adaToLovelace(adaVal) {
 /**
  * LocalStorage Mock database helpers for Cardano Marketplace datasets
  */
+export function sanitizeAddress(addr) {
+  const invalidAddrA = 'addr_test1qrmw7p2yvnvl4snm7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8';
+  const invalidAddrB = 'addr_test1qp6r6t2cxw7yvn7tndj55pgyuxf295p5w6shf286lcp64j9uqf0x5q6qsd3w205l7kxp2nysu9z7t2cxlxsh3d46ysqhe4h8';
+  
+  if (!addr || addr === invalidAddrA) {
+    return 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv';
+  }
+  if (addr === invalidAddrB) {
+    return 'addr_test1vzpwq5z3xyum8vqnddd9mdnmafh3djcxnc6jemlgdmswcve6tkw';
+  }
+  return addr;
+}
+
 export function getStoredDatasets() {
   if (typeof window === 'undefined') return [];
   const datasets = localStorage.getItem('cardano_datasets');
@@ -277,7 +290,7 @@ export function getStoredDatasets() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(ds => ({
           ...ds,
-          owner: ds.owner || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
+          owner: sanitizeAddress(ds.owner),
           trustScore: ds.trustScore || 88,
           aiReadiness: ds.aiReadiness || 85,
           compliance: ds.compliance || 95,
@@ -503,7 +516,7 @@ export function getStoredModels() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(model => ({
           ...model,
-          owner: model.owner || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
+          owner: sanitizeAddress(model.owner),
           datasetIds: model.datasetIds || (model.datasetId ? [Number(model.datasetId)] : [1]),
           framework: model.framework || 'TensorFlow',
           inferenceTask: model.inferenceTask || 'Classification',
@@ -572,7 +585,7 @@ export function getProposals() {
       if (Array.isArray(parsed)) {
         return parsed.filter(Boolean).map(prop => ({
           ...prop,
-          creator: prop.creator || 'addr_test1qph8ulm66hnfre35wqvy6p0tun40zuu57qxfzklhf6r5srv',
+          creator: sanitizeAddress(prop.creator),
           votesYes: Number(prop.votesYes || 0),
           votesNo: Number(prop.votesNo || 0),
           votesAbstain: Number(prop.votesAbstain || 0),
