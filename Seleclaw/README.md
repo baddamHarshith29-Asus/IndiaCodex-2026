@@ -1,6 +1,13 @@
 # Aegis AI v2: Decentralized AI Trust, Provenance, & Escrow Platform on Cardano
 
-Aegis AI v2 is a decentralized, privacy-first AI marketplace and model registry built on the **Cardano Preprod Testnet**. It bridges the gap between healthcare data providers, AI researchers, and commercial entities by offering verifiable dataset provenance, cryptographic escrow payments, and secure model execution checkers.
+Aegis AI v2 is a decentralized, privacy-first AI marketplace and model registry built on the **Cardano Preprod Testnet** by team **Seleclaw**. It bridges the gap between healthcare data providers, AI researchers, and commercial entities by offering verifiable dataset provenance, cryptographic escrow payments, and secure model execution checkers.
+
+---
+
+## 💻 Hackathon Presentation Slide Deck
+We have packaged a premium, printable, interactive presentation slide deck directly in this submission folder!
+* **Slide Deck File**: [presentation.html](file:///d:/aegis/IndiaCodex-2026/Seleclaw/presentation.html)
+* *Tip*: Open the HTML file in any browser, and press **`Ctrl + P`** (Print) to save it directly as a professional landscape **PDF** presentation!
 
 ---
 
@@ -39,6 +46,15 @@ Allows the community to vote on dataset verification rules and direct platform t
 
 ---
 
+## ⚙️ Project Workflow Steps
+1. **Secure Upload & Scan**: The data provider uploads a dataset category, price, and raw files. The pipeline scans for virus vectors, scores AI formatting readiness, and checks GDPR compliance.
+2. **On-Chain Certification**: The pipeline uploads metadata to **Pinata IPFS** and mints an on-chain **Dataset Certificate NFT** to establish the provenance root.
+3. **Escrow Purchase**: A researcher discovers the dataset, inspects its Trust Score and 9-node Provenance Graph, and purchases access. The Lucid Evolution client routes 95% of the ADA to the seller and locks 5% in the Plutus Escrow contract while minting a **License NFT** into the buyer's wallet.
+4. **Model Training & Telemetry**: The researcher launches the **Secure AI Workspace**, mounts the licensed data, executes training scripts with active CPU/GPU monitoring, and clicks "Export Model Weights" to mint a checkpoint verification NFT.
+5. **Model Registration**: The finalized model is registered on the blockchain ledger, permanently referencing the specific training dataset dependency path.
+
+---
+
 ## 🛠️ Technology Stack
 * **Frontend**: Next.js 15, CSS (Premium Neon & Neon Glassmorphism theme)
 * **Blockchain Integration**: Lucid Evolution, WebAssembly, Blockfrost API
@@ -50,7 +66,7 @@ Allows the community to vote on dataset verification rules and direct platform t
 
 ## 📁 Repository Structure
 ```
-Aegis_AI/
+Seleclaw/
 ├── components/          # Reusable UI Components (Provenance Graph, Compare Modals)
 ├── contracts/           # Aiken Smart Contract validators & compiler configs
 │   ├── validators/      # Validator files (marketplace.ak)
@@ -59,6 +75,7 @@ Aegis_AI/
 ├── pages/               # Next.js router pages (Marketplace, Dashboard, Models, Governance)
 ├── styles/              # Global animations and neon glassmorphism CSS
 ├── env.example          # Environment configuration specs
+├── presentation.html    # Printable slide deck presentation page
 └── README.md            # Project description & setup documentation
 ```
 
@@ -69,7 +86,7 @@ Aegis_AI/
 1. **Clone the repository**:
    ```bash
    git clone <repo_url>
-   cd Aegis_AI
+   cd Seleclaw
    ```
 
 2. **Install dependencies**:
@@ -97,12 +114,3 @@ Aegis_AI/
    npm run dev
    ```
    Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-## 💡 How to Test & Demo the Platform
-1. **Connect Wallet**: Click the "Connect Wallet" button. You can connect a real **Lace** or **Nami** wallet loaded with Preprod ADA, or select **Simulation Mode** to instantly explore with a simulated balance.
-2. **Register a Dataset**: Go to `/upload`, upload a file, and click **Secure Audit**. With your Pinata key configured, the file will perform live IPFS pinning.
-3. **Purchase License**: Go to the Marketplace, view the side-by-side dataset compare modal, open a dataset passport, and purchase a license to mint the License NFT.
-4. **Train Model**: Go to your Dashboard, open the Secure AI Workspace, select the licensed dataset, run the training job, and click **Export Model Weights** to mint a checkpoint NFT.
-5. **Model Registry**: Go to `/models` and register your PyTorch/TensorFlow models with clear task tags.
